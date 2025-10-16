@@ -59,7 +59,7 @@ public class Main {
        * 1 billete de 50, 1 billete de 20, 1 billete de 5 y 1 moneda de 1 euro.
        */
         public static void desgloseImporte(){
-          Scanner teclado = new Scanner(System.in);
+          /**Scanner teclado = new Scanner(System.in);
           System.out.println("Introduce un importe en euros: ");
           int importe = teclado.nextInt();
           int[] billetes = {500, 200, 100, 50, 20, 10, 5, 2, 1};
@@ -72,9 +72,20 @@ public class Main {
             if(cantidadBilletes[i] > 0){
               System.out.println("Billetes de :  " + billetes[i] + " euros: " + cantidadBilletes[i]);
             }
+           */
+          public static void getBilletes() {
+            System.out.println("Billetes = " + euros);
+            int resto = euros;
+            for (int i = 0; i < billetes.lenght; i++) {
+              if (resto >= billetes[i]) {
+                int cantidad = resto / billetes[i];
+                resto = resto % billetes[i];
+                System.out.println("Billetes de " + billetes[i] + " euros: " + cantidad);
 
-          }
-        }
+              }
+
+            }
+          };
 
         /** Crear un programa que lea por teclado una tabla de 10 números enteros y la desplace una posición hacia
          la derecha: el primero pasa a ser el segundo, el segundo pasa a ser el tercero y así sucesivamente.
